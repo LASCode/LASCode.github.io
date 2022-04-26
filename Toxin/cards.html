@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>111111</title>
+  <script defer src="js/vendors-node_modules_jquery_dist_jquery_js-node_modules_pug-runtime_index_js.js"></script><script defer src="js/vendors-node_modules_air-datepicker_index_es_js-node_modules_air-datepicker_air-datepicker_cs-d4dacd.js"></script><script defer src="js/vendors-node_modules_owl_carousel_dist_owl_carousel_js.js"></script><script defer src="js/vendors-node_modules_jquery-mask-plugin_dist_jquery_mask_js.js"></script><script defer src="js/node_modules_moment_locale_sync_recursive_-src_components_date-dropdown_date-dropdown_js-src_-48346a.js"></script><script defer src="js/src_components_carousel_carousel_js-src_components_rooms-dropdown_rooms-dropdown_js.js"></script><script defer src="js/cards.js"></script><link href="css/vendors-node_modules_air-datepicker_index_es_js-node_modules_air-datepicker_air-datepicker_cs-d4dacd.css" rel="stylesheet"><link href="css/cards.css" rel="stylesheet"></head>
+  <body class="page">
+    <div class="page__header">
+      <header class="header header--default">
+        <div class="header__wrapper">
+          <div class="header__logo"><a href="./"><img src="img/logo/logo-default.svg"></a></div>
+          <div class="header__container--hamburger">
+            <div class="hamburger-menu">
+              <label class="hamburger-menu__label">
+                <input class="hamburger-menu__checkbox" type="checkbox">
+                <div class="hamburger-menu__line-container">
+                  <div class="hamburger-menu__single-line"></div>
+                  <div class="hamburger-menu__single-line"></div>
+                  <div class="hamburger-menu__single-line"></div>
+                </div>
+              </label>
+            </div>
+          </div>
+          <nav class="header__navigation">
+            <div class="header__nav-container">
+              <ul class="header__nav-list">
+                <li class="header__nav-item"><a class="header__nav-link header__nav-link--with-bold-text" href="/aboutUs.html">О нас</a>
+                </li>
+                <li class="header__nav-item">
+                  <details class="header__details">
+                    <summary class="header__summary"><a class="header__nav-link" href="/services.html">Услуги</a><span class="header__nav-arrow">expand_more</span></summary>
+                    <div class="header__details-hidden">
+                      <ul class="header__nav-list header__nav-list--hidden">
+                        <li class="header__nav-item header__nav-item--without-margin header__nav-item--with-padding"><a class="header__nav-link" href="/services1.html">Услуги 1</a></li>
+                        <li class="header__nav-item header__nav-item--without-margin header__nav-item--with-padding"><a class="header__nav-link" href="/services2.html">Услуги 2</a></li>
+                        <li class="header__nav-item header__nav-item--without-margin header__nav-item--with-padding"><a class="header__nav-link" href="/services3.html">Услуги 3</a></li>
+                      </ul>
+                    </div>
+                  </details>
+                </li>
+                <li class="header__nav-item"><a class="header__nav-link" href="/vacancies.html">Вакансии</a>
+                </li>
+                <li class="header__nav-item"><a class="header__nav-link" href="/news.html">Новости</a>
+                </li>
+                <li class="header__nav-item">
+                  <details class="header__details">
+                    <summary class="header__summary"><a class="header__nav-link" href="/agreements.html">Соглашения</a><span class="header__nav-arrow">expand_more</span></summary>
+                    <div class="header__details-hidden">
+                      <ul class="header__nav-list header__nav-list--hidden">
+                        <li class="header__nav-item header__nav-item--without-margin header__nav-item--with-padding"><a class="header__nav-link" href="/agreement1.html">Соглашение 1</a></li>
+                        <li class="header__nav-item header__nav-item--without-margin header__nav-item--with-padding"><a class="header__nav-link" href="/agreement2.html">Соглашение 2</a></li>
+                        <li class="header__nav-item header__nav-item--without-margin header__nav-item--with-padding"><a class="header__nav-link" href="/agreement3.html">Соглашение 3</a></li>
+                      </ul>
+                    </div>
+                  </details>
+                </li>
+              </ul>
+              <div class="header__nav-user">
+                <div class="header__nav-btn header__nav-btn--login"><a class="button button--outlined" href="./sign-in.html"><span class="button__wrapper"><span class="button__text">Войти</span></span></a>
+                </div>
+                <div class="header__nav-btn header__nav-btn--register"><a class="button button--default" href="./registration.html"><span class="button__wrapper"><span class="button__text">Зарегистрироваться</span></span></a>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+    </div>
+    <div class="page__content">
+      <div class="cards-page">
+        <div class="cards-page__header">
+          <header class="header header--ui-kit">
+            <div class="header__logo"><img src="img/logo/logo-uikit.svg"></div>
+          </header>
+        </div>
+        <div class="cards-page__wrapper">
+          <div class="cards-page__collumn">
+            <div class="card card--find-room">
+              <div class="card__title">
+                <h1>Найдём номера под ваши пожелания</h1>
+              </div>
+              <form class="card__form">
+                <div class="card__container card__container--with-z-index">
+                  <div class="form-input form-input--double form-input--with-dropdown">
+                    <div class="form-item-container">
+                      <div class="form-item-container__header form-item-container__header--with-short-margin">
+                        <h3 class="form-item-container__title">прибытие</h3>
+                      </div>
+                      <div class="form-item-container__body">
+                        <div class="form-input__single-input-wrapper">
+                          <input class="form-input__input form-input__input--with-icon form-input__input--readonly" readonly data-action="toggleDropdown" placeholder="ДД.ММ.ГГГГ" data-index="0"><i class="form-input__icon material-icons">expand_more</i>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-item-container">
+                      <div class="form-item-container__header form-item-container__header--with-short-margin">
+                        <h3 class="form-item-container__title">выезд</h3>
+                      </div>
+                      <div class="form-item-container__body">
+                        <div class="form-input__single-input-wrapper">
+                          <input class="form-input__input form-input__input--with-icon form-input__input--readonly" readonly data-action="toggleDropdown" placeholder="ДД.ММ.ГГГГ" data-index="1"><i class="form-input__icon material-icons">expand_more</i>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-input__dropdown-wrapper">
+                      <div class="dropdown-date">
+                        <input class="dropdown-date__input">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card__container card__container--with-20px-margin">
+                  <div class="form-item-container">
+                    <div class="form-item-container__header form-item-container__header--with-short-margin">
+                      <h3 class="form-item-container__title">гости</h3>
+                    </div>
+                    <div class="form-item-container__body">
+                      <div class="form-input form-input--single form-input--with-dropdown">
+                        <div class="form-input__single-input-wrapper">
+                          <input class="form-input__input form-input__input--with-icon form-input__input--readonly" readonly data-action="toggleDropdown" placeholder="Сколько гостей" data-index="0"><i class="form-input__icon material-icons">expand_more</i>
+                        </div>
+                        <div class="form-input__dropdown-wrapper">
+                          <div class="dropdown-guest">
+                            <div class="dropdown-guest__type-container" data-name="Взрослые">
+                              <div class="dropdown-guest__type-name">Взрослые</div>
+                              <div class="dropdown-guest__btn-container">
+                                <button class="dropdown-guest__change-count-button" data-action="reduce">-</button><span class="dropdown-guest__guest-count">0</span>
+                                <button class="dropdown-guest__change-count-button" data-action="add">+</button>
+                              </div>
+                            </div>
+                            <div class="dropdown-guest__type-container" data-name="Дети">
+                              <div class="dropdown-guest__type-name">Дети</div>
+                              <div class="dropdown-guest__btn-container">
+                                <button class="dropdown-guest__change-count-button" data-action="reduce">-</button><span class="dropdown-guest__guest-count">0</span>
+                                <button class="dropdown-guest__change-count-button" data-action="add">+</button>
+                              </div>
+                            </div>
+                            <div class="dropdown-guest__type-container" data-name="Младенцы">
+                              <div class="dropdown-guest__type-name">Младенцы</div>
+                              <div class="dropdown-guest__btn-container">
+                                <button class="dropdown-guest__change-count-button" data-action="reduce">-</button><span class="dropdown-guest__guest-count">0</span>
+                                <button class="dropdown-guest__change-count-button" data-action="add">+</button>
+                              </div>
+                            </div>
+                            <div class="dropdown-guest__actions">
+                              <button class="button button--borderless global--hidden" type="button" data-action="clear"><span class="button__wrapper"><span class="button__text">Очистить</span></span></button>
+                              <button class="button button--borderless" type="button" data-action="confirm"><span class="button__wrapper"><span class="button__text">Применить</span></span></button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card__container card__container--with-30px-margin"><a class="button button--big" href="/changeme.html"><span class="button__wrapper"><span class="button__text">Подобрать номер</span><i class="button__icon material-icons">arrow_forward</i></span></a>
+                </div>
+              </form>
+            </div>
+            <div class="card card--register">
+              <div class="card__title">
+                <h1>Регистрация аккаунта</h1>
+              </div>
+              <form class="card__form">
+                <div class="card__container card__container--with-grid">
+                  <div class="form-input form-input--single">
+                    <div class="form-input__single-input-wrapper">
+                      <input class="form-input__input" placeholder="Имя" data-index="0">
+                    </div>
+                  </div>
+                  <div class="form-input form-input--single">
+                    <div class="form-input__single-input-wrapper">
+                      <input class="form-input__input" placeholder="Фамилия" data-index="0">
+                    </div>
+                  </div>
+                  <div class="card__user-sex">
+                    <div class="radio-button">
+                      <label class="radio-button__label">
+                        <input class="radio-button__input" type="radio" name="changeMe" checked><span class="radio-button__fake-input"></span><span class="radio-button__title">Мужчина</span>
+                      </label>
+                      <label class="radio-button__label">
+                        <input class="radio-button__input" type="radio" name="changeMe"><span class="radio-button__fake-input"></span><span class="radio-button__title">Женщина</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="card__container card__container--with-20px-margin">
+                  <div class="form-item-container">
+                    <div class="form-item-container__header form-item-container__header--with-short-margin">
+                      <h3 class="form-item-container__title">дата рождения</h3>
+                    </div>
+                    <div class="form-item-container__body">
+                      <div class="card__form-element">
+                        <div class="form-input form-input--single">
+                          <div class="form-input__single-input-wrapper">
+                            <input class="form-input__input form-input__input--masked" placeholder="ДД.ММ.ГГГГ" data-index="0">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card__container card__container--with-grid card__container--with-20px-margin">
+                  <div class="form-item-container">
+                    <div class="form-item-container__header form-item-container__header--with-short-margin">
+                      <h3 class="form-item-container__title">данные для входа в сервис</h3>
+                    </div>
+                    <div class="form-item-container__body">
+                      <div class="card__container card__container--with-grid">
+                        <div class="form-input form-input--single">
+                          <div class="form-input__single-input-wrapper">
+                            <input class="form-input__input" placeholder="Email" data-index="0">
+                          </div>
+                        </div>
+                        <div class="form-input form-input--single">
+                          <div class="form-input__single-input-wrapper">
+                            <input class="form-input__input" placeholder="Пароль" data-index="0">
+                          </div>
+                        </div>
+                        <div class="toggle-button">
+                          <label class="toggle-button__label">
+                            <input class="toggle-button__checkbox" type="checkbox"><span class="toggle-button__toggle"></span><span class="toggle-button__title">Получать спецпредложения</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card__container card__container--with-20px-margin">
+                  <button class="button button--big" type="button"><span class="button__wrapper"><span class="button__text">Зарегистрироваться</span><i class="button__icon material-icons">arrow_forward</i></span></button>
+                </div>
+                <div class="card__container card__container--with-30px-margin">
+                  <div class="card__already-register"><span>Уже есть аккаунт на Toxin</span>
+                    <div class="card__login-btn"><a class="button button--outlined" href="/loginpage.kal"><span class="button__wrapper"><span class="button__text">Войти</span></span></a>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="cards-page__collumn">
+            <div class="card card--selected-room">
+              <div class="card__title">
+                <div class="card__room-number-container"><span class="card__room-number">№888</span><span class="card__room-type">люкс</span></div>
+                <div class="card__room-price-container"><span class="card__price-sum">9 990₽</span><span class="card__price-text">в сутки</span></div>
+              </div>
+              <div class="card__container card__container--with-20px-margin">
+                <div class="form-input form-input--double form-input--with-dropdown">
+                  <div class="form-item-container">
+                    <div class="form-item-container__header form-item-container__header--with-short-margin">
+                      <h3 class="form-item-container__title">прибытие</h3>
+                    </div>
+                    <div class="form-item-container__body">
+                      <div class="form-input__single-input-wrapper">
+                        <input class="form-input__input form-input__input--with-icon form-input__input--readonly" readonly data-action="toggleDropdown" placeholder="ДД.ММ.ГГГГ" data-index="0"><i class="form-input__icon material-icons">expand_more</i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-item-container">
+                    <div class="form-item-container__header form-item-container__header--with-short-margin">
+                      <h3 class="form-item-container__title">выезд</h3>
+                    </div>
+                    <div class="form-item-container__body">
+                      <div class="form-input__single-input-wrapper">
+                        <input class="form-input__input form-input__input--with-icon form-input__input--readonly" readonly data-action="toggleDropdown" placeholder="ДД.ММ.ГГГГ" data-index="1"><i class="form-input__icon material-icons">expand_more</i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-input__dropdown-wrapper">
+                    <div class="dropdown-date">
+                      <input class="dropdown-date__input">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card__container card__container--with-20px-margin">
+                <div class="form-item-container">
+                  <div class="form-item-container__header form-item-container__header--with-short-margin">
+                    <h3 class="form-item-container__title">гости</h3>
+                  </div>
+                  <div class="form-item-container__body">
+                    <div class="form-input form-input--single form-input--with-dropdown">
+                      <div class="form-input__single-input-wrapper">
+                        <input class="form-input__input form-input__input--with-icon form-input__input--readonly" readonly data-action="toggleDropdown" placeholder="Сколько гостей" data-index="0"><i class="form-input__icon material-icons">expand_more</i>
+                      </div>
+                      <div class="form-input__dropdown-wrapper">
+                        <div class="dropdown-guest">
+                          <div class="dropdown-guest__type-container" data-name="Взрослые">
+                            <div class="dropdown-guest__type-name">Взрослые</div>
+                            <div class="dropdown-guest__btn-container">
+                              <button class="dropdown-guest__change-count-button" data-action="reduce">-</button><span class="dropdown-guest__guest-count">0</span>
+                              <button class="dropdown-guest__change-count-button" data-action="add">+</button>
+                            </div>
+                          </div>
+                          <div class="dropdown-guest__type-container" data-name="Дети">
+                            <div class="dropdown-guest__type-name">Дети</div>
+                            <div class="dropdown-guest__btn-container">
+                              <button class="dropdown-guest__change-count-button" data-action="reduce">-</button><span class="dropdown-guest__guest-count">0</span>
+                              <button class="dropdown-guest__change-count-button" data-action="add">+</button>
+                            </div>
+                          </div>
+                          <div class="dropdown-guest__type-container" data-name="Младенцы">
+                            <div class="dropdown-guest__type-name">Младенцы</div>
+                            <div class="dropdown-guest__btn-container">
+                              <button class="dropdown-guest__change-count-button" data-action="reduce">-</button><span class="dropdown-guest__guest-count">0</span>
+                              <button class="dropdown-guest__change-count-button" data-action="add">+</button>
+                            </div>
+                          </div>
+                          <div class="dropdown-guest__actions">
+                            <button class="button button--borderless global--hidden" type="button" data-action="clear"><span class="button__wrapper"><span class="button__text">Очистить</span></span></button>
+                            <button class="button button--borderless" type="button" data-action="confirm"><span class="button__wrapper"><span class="button__text">Применить</span></span></button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card__container card__container--with-20px-margin">
+                <div class="price-list">
+                  <div class="price-list__items">
+                    <div class="price-list__item"><span class="price-list__title">9 990₽ х 4 суток</span><span class="price-list__info"></span><span class="price-list__price">39 960₽</span></div>
+                    <div class="price-list__item"><span class="price-list__title">Сбор за услуги: скидка 2 179₽</span><span class="price-list__info">
+                        <div class="i-button">
+                          <label class="i-button__label"></label>
+                          <div class="i-button__wrapper"><span class="i-button__text">i</span></div>
+                        </div></span><span class="price-list__price">0₽</span></div>
+                    <div class="price-list__item"><span class="price-list__title">Сбор за дополнительные услуги</span><span class="price-list__info">
+                        <div class="i-button">
+                          <label class="i-button__label"></label>
+                          <div class="i-button__wrapper"><span class="i-button__text">i</span></div>
+                        </div></span><span class="price-list__price">300₽</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="card__container card__container--with-30px-margin">
+                <div class="total-price"><span class="total-price__title">Итого</span><span class="total-price__dots"></span><span class="total-price__value">38 081₽</span></div>
+              </div>
+              <div class="card__book-btn">
+                <button class="button button--big" type="button"><span class="button__wrapper"><span class="button__text">Забронировать</span><i class="button__icon material-icons">arrow_forward</i></span></button>
+              </div>
+            </div>
+            <div class="card card--login">
+              <div class="card__title">
+                <h1>Войти</h1>
+              </div>
+              <form class="card__form">
+                <div class="card__container card__container--with-grid">
+                  <div class="form-input form-input--single">
+                    <div class="form-input__single-input-wrapper">
+                      <input class="form-input__input" placeholder="Email" data-index="0">
+                    </div>
+                  </div>
+                  <div class="form-input form-input--single">
+                    <div class="form-input__single-input-wrapper">
+                      <input class="form-input__input" placeholder="Пароль" data-index="0">
+                    </div>
+                  </div>
+                </div>
+                <div class="card__container card__container--with-20px-margin">
+                  <button class="button button--big" type="button"><span class="button__wrapper"><span class="button__text">войти</span><i class="button__icon material-icons">arrow_forward</i></span></button>
+                </div>
+                <div class="card__container card__container--with-30px-margin">
+                  <div class="card__not-register"><span>Нет аккаунта на Toxin?</span>
+                    <div class="card__register-btn"><a class="button button--outlined" href="/loginpage.kal"><span class="button__wrapper"><span class="button__text">Создать</span></span></a>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="cards-page__collumn">
+            <div class="card card--room">
+              <div class="card__room-slider">
+                <div class="carousel js-carousel">
+                  <div class="carousel__item"><img class="carousel__img" src="img/rooms/room1.jpg" alt="room1"></div>
+                  <div class="carousel__item"><img class="carousel__img" src="img/rooms/room2.jpg" alt="room2"></div>
+                  <div class="carousel__item"><img class="carousel__img" src="img/rooms/room1.jpg" alt="room1"></div>
+                  <div class="carousel__item"><img class="carousel__img" src="img/rooms/room2.jpg" alt="room2"></div>
+                  <div class="carousel__item"><img class="carousel__img" src="img/rooms/room1.jpg" alt="room1"></div>
+                  <div class="carousel__item"><img class="carousel__img" src="img/rooms/room2.jpg" alt="room2"></div>
+                </div>
+              </div>
+              <div class="card__room-info">
+                <div class="card__title">
+                  <div class="card__room-number-container"><span class="card__room-number">№888</span><span class="card__room-type">Люкс</span>
+                  </div>
+                  <div class="card__room-price-container"><span class="card__price-sum">9 900₽</span><span class="card__price-text">В сутки</span></div>
+                </div>
+                <div class="card__br"></div>
+                <div class="card__rate-wrapper"><span class="card__rate-button-container"><span class="rate-button js-rate-button">
+                      <input class="rate-button__input" value="5"><span class="rate-button__star material-icons active" data-index="1">star</span><span class="rate-button__star material-icons active" data-index="2">star</span><span class="rate-button__star material-icons active" data-index="3">star</span><span class="rate-button__star material-icons active" data-index="4">star</span><span class="rate-button__star material-icons active" data-index="5">star</span></span></span><span class="card__comments-container"><span class="card__comments-count">145</span><span class="card__comments-text">Отзывов</span></span></div>
+              </div>
+            </div>
+            <div class="card card--room">
+              <div class="card__room-slider">
+                <div class="carousel js-carousel">
+                  <div class="carousel__item"><img class="carousel__img" src="img/rooms/room1.jpg" alt="room1"></div>
+                  <div class="carousel__item"><img class="carousel__img" src="img/rooms/room2.jpg" alt="room2"></div>
+                  <div class="carousel__item"><img class="carousel__img" src="img/rooms/room1.jpg" alt="room1"></div>
+                  <div class="carousel__item"><img class="carousel__img" src="img/rooms/room2.jpg" alt="room2"></div>
+                  <div class="carousel__item"><img class="carousel__img" src="img/rooms/room1.jpg" alt="room1"></div>
+                  <div class="carousel__item"><img class="carousel__img" src="img/rooms/room2.jpg" alt="room2"></div>
+                </div>
+              </div>
+              <div class="card__room-info">
+                <div class="card__title">
+                  <div class="card__room-number-container"><span class="card__room-number">№840</span>
+                  </div>
+                  <div class="card__room-price-container"><span class="card__price-sum">9 900₽</span><span class="card__price-text">В сутки</span></div>
+                </div>
+                <div class="card__br"></div>
+                <div class="card__rate-wrapper"><span class="card__rate-button-container"><span class="rate-button js-rate-button">
+                      <input class="rate-button__input" value="4"><span class="rate-button__star material-icons active" data-index="1">star</span><span class="rate-button__star material-icons active" data-index="2">star</span><span class="rate-button__star material-icons active" data-index="3">star</span><span class="rate-button__star material-icons active" data-index="4">star</span><span class="rate-button__star material-icons" data-index="5">star_border</span></span></span><span class="card__comments-container"><span class="card__comments-count">65</span><span class="card__comments-text">Отзывов</span></span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="page__footer">
+      <footer class="footer">
+        <section class="footer__section footer__section--base">
+          <div class="footer__section-container">
+            <div class="footer__grid-container">
+              <div class="footer__grid-item footer__grid-item--with-brand-info">
+                <div class="footer__brand-logo"><img src="img/logo/logo-default.svg"></div>
+                <div class="footer__brand-info"><span>Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»</span></div>
+              </div>
+              <div class="footer__grid-item footer__grid-item--with-nav-info">
+                <div class="footer__grid-title"><span>Навигация</span></div>
+                <ul class="footer__link-list">
+                  <li class="footer__link-item">О нас</li>
+                  <li class="footer__link-item">Новости</li>
+                  <li class="footer__link-item">Служба поддержки</li>
+                  <li class="footer__link-item">Услуги</li>
+                </ul>
+              </div>
+              <div class="footer__grid-item footer__grid-item--with-aboutUs-info">
+                <div class="footer__grid-title"><span>О нас</span></div>
+                <ul class="footer__link-list">
+                  <li class="footer__link-item">О сервисе</li>
+                  <li class="footer__link-item">Наша команда</li>
+                  <li class="footer__link-item">Вакансии</li>
+                  <li class="footer__link-item">Инвесторы</li>
+                </ul>
+              </div>
+              <div class="footer__grid-item footer__grid-item--with-support-info">
+                <div class="footer__grid-title"><span>Служба поддержки</span></div>
+                <ul class="footer__link-list">
+                  <li class="footer__link-item">Соглашения</li>
+                  <li class="footer__link-item">Сообщества</li>
+                  <li class="footer__link-item">Связь с нами</li>
+                </ul>
+              </div>
+              <div class="footer__grid-item footer__grid-item--with-subscribe-info">
+                <div class="footer__grid-title"><span>Подписка</span></div>
+                <div class="footer__subscribe-text"><span>Получайте специальные предложения и новости сервиса</span></div>
+                <div class="footer__subscribe-input">
+                  <form action="https://echo.htmlacademy.ru" method="post" name="subscribe">
+                    <div class="form-input form-input--single">
+                      <div class="form-input__single-input-wrapper">
+                        <input class="form-input__input form-input__input--with-icon" placeholder="Email" name="Email" data-index="0">
+                        <button class="form-input__button material-icons" type="submit">arrow_forward</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="footer__section footer__section--copyright">
+          <div class="footer__section-container">
+            <div class="footer__copyright-wrapper">
+              <div class="footer__copyright-text"><span>Copyright © 2018 Toxin отель. Все права защищены.</span></div>
+              <div class="footer__copyright-socials"><a class="footer__social-link" href="404.html" target="_blank" rel="noopener noreferrer" title="Twitter"><span class="footer__social-icon"></span></a><a class="footer__social-link" href="404.html" target="_blank" rel="noopener noreferrer" title="Facebook"><span class="footer__social-icon"></span></a><a class="footer__social-link" href="404.html" target="_blank" rel="noopener noreferrer" title="Instagram"><span class="footer__social-icon"></span></a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Search room</title>
+  <script defer src="js/vendors-node_modules_jquery_dist_jquery_js-node_modules_pug-runtime_index_js.js"></script><script defer src="js/vendors-node_modules_air-datepicker_index_es_js-node_modules_air-datepicker_air-datepicker_cs-d4dacd.js"></script><script defer src="js/vendors-node_modules_owl_carousel_dist_owl_carousel_js.js"></script><script defer src="js/vendors-node_modules_nouislider_src_nouislider_less-node_modules_nouislider_dist_nouislider_j-eacb18.js"></script><script defer src="js/node_modules_moment_locale_sync_recursive_-src_components_date-dropdown_date-dropdown_js-src_-48346a.js"></script><script defer src="js/src_components_carousel_carousel_js-src_components_rooms-dropdown_rooms-dropdown_js.js"></script><script defer src="js/search-room.js"></script><link href="css/vendors-node_modules_air-datepicker_index_es_js-node_modules_air-datepicker_air-datepicker_cs-d4dacd.css" rel="stylesheet"><link href="css/search-room.css" rel="stylesheet"></head>
+  <body class="page">
+    <div class="page__header">
+      <header class="header header--default">
+        <div class="header__wrapper">
+          <div class="header__logo"><a href="./"><img src="img/logo/logo-default.svg"></a></div>
+          <div class="header__container--hamburger">
+            <div class="hamburger-menu">
+              <label class="hamburger-menu__label">
+                <input class="hamburger-menu__checkbox" type="checkbox">
+                <div class="hamburger-menu__line-container">
+                  <div class="hamburger-menu__single-line"></div>
+                  <div class="hamburger-menu__single-line"></div>
+                  <div class="hamburger-menu__single-line"></div>
+                </div>
+              </label>
+            </div>
+          </div>
+          <nav class="header__navigation">
+            <div class="header__nav-container">
+              <ul class="header__nav-list">
+                <li class="header__nav-item"><a class="header__nav-link header__nav-link--with-bold-text" href="/aboutUs.html">О нас</a>
+                </li>
+                <li class="header__nav-item">
+                  <details class="header__details">
+                    <summary class="header__summary"><a class="header__nav-link" href="/services.html">Услуги</a><span class="header__nav-arrow">expand_more</span></summary>
+                    <div class="header__details-hidden">
+                      <ul class="header__nav-list header__nav-list--hidden">
+                        <li class="header__nav-item header__nav-item--without-margin header__nav-item--with-padding"><a class="header__nav-link" href="/services1.html">Услуги 1</a></li>
+                        <li class="header__nav-item header__nav-item--without-margin header__nav-item--with-padding"><a class="header__nav-link" href="/services2.html">Услуги 2</a></li>
+                        <li class="header__nav-item header__nav-item--without-margin header__nav-item--with-padding"><a class="header__nav-link" href="/services3.html">Услуги 3</a></li>
+                      </ul>
+                    </div>
+                  </details>
+                </li>
+                <li class="header__nav-item"><a class="header__nav-link" href="/vacancies.html">Вакансии</a>
+                </li>
+                <li class="header__nav-item"><a class="header__nav-link" href="/news.html">Новости</a>
+                </li>
+                <li class="header__nav-item">
+                  <details class="header__details">
+                    <summary class="header__summary"><a class="header__nav-link" href="/agreements.html">Соглашения</a><span class="header__nav-arrow">expand_more</span></summary>
+                    <div class="header__details-hidden">
+                      <ul class="header__nav-list header__nav-list--hidden">
+                        <li class="header__nav-item header__nav-item--without-margin header__nav-item--with-padding"><a class="header__nav-link" href="/agreement1.html">Соглашение 1</a></li>
+                        <li class="header__nav-item header__nav-item--without-margin header__nav-item--with-padding"><a class="header__nav-link" href="/agreement2.html">Соглашение 2</a></li>
+                        <li class="header__nav-item header__nav-item--without-margin header__nav-item--with-padding"><a class="header__nav-link" href="/agreement3.html">Соглашение 3</a></li>
+                      </ul>
+                    </div>
+                  </details>
+                </li>
+              </ul>
+              <div class="header__nav-user">
+                <div class="header__nav-btn header__nav-btn--login"><a class="button button--outlined" href="./sign-in.html"><span class="button__wrapper"><span class="button__text">Войти</span></span></a>
+                </div>
+                <div class="header__nav-btn header__nav-btn--register"><a class="button button--default" href="./registration.html"><span class="button__wrapper"><span class="button__text">Зарегистрироваться</span></span></a>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+    </div>
+    <div class="page__content">
+      <div class="search-room-page">
+        <div class="search-room-page__blur-container js-blur"></div>
+        <button class="search-room-page__show-filter-button js-show-filter">
+          <div class="search-room-page__bth-flex-container">
+            <div class="search-room-page__btn-arrow">arrow_forward</div>
+            <div class="search-room-page__btn-text">Открыть фильтр</div>
+            <div class="search-room-page__btn-arrow">arrow_forward</div>
+          </div>
+        </button>
+        <div class="search-room-page__container">
+          <div class="search-room-page__content">
+            <div class="search-room-page__grid-container">
+              <div class="search-room-page__grid-item">
+                <div class="search-room-page__filter js-filter">
+                  <div class="search-room-page__filter-item search-room-page__filter-item--with-z-index">
+                    <div class="form-item-container">
+                      <div class="form-item-container__header form-item-container__header--with-short-margin">
+                        <h3 class="form-item-container__title">даты пребывания в отеле</h3>
+                      </div>
+                      <div class="form-item-container__body">
+                        <div class="form-input form-input--single form-input--with-dropdown">
+                          <div class="form-input__single-input-wrapper">
+                            <input class="form-input__input form-input__input--with-icon form-input__input--readonly" readonly data-action="toggleDropdown" placeholder="Укажите дату" data-index="0"><i class="form-input__icon material-icons">expand_more</i>
+                          </div>
+                          <div class="form-input__dropdown-wrapper">
+                            <div class="dropdown-date">
+                              <input class="dropdown-date__input">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="search-room-page__filter-item search-room-page__filter-item--with-mt-20px">
+                    <div class="form-item-container">
+                      <div class="form-item-container__header form-item-container__header--with-short-margin">
+                        <h3 class="form-item-container__title">гости</h3>
+                      </div>
+                      <div class="form-item-container__body">
+                        <div class="form-input form-input--single form-input--with-dropdown">
+                          <div class="form-input__single-input-wrapper">
+                            <input class="form-input__input form-input__input--with-icon form-input__input--readonly" readonly data-action="toggleDropdown" placeholder="Укажите число гостей" data-index="0"><i class="form-input__icon material-icons">expand_more</i>
+                          </div>
+                          <div class="form-input__dropdown-wrapper">
+                            <div class="dropdown-guest">
+                              <div class="dropdown-guest__type-container" data-name="Взрослые">
+                                <div class="dropdown-guest__type-name">Взрослые</div>
+                                <div class="dropdown-guest__btn-container">
+                                  <button class="dropdown-guest__change-count-button" data-action="reduce">-</button><span class="dropdown-guest__guest-count">0</span>
+                                  <button class="dropdown-guest__change-count-button" data-action="add">+</button>
+                                </div>
+                              </div>
+                              <div class="dropdown-guest__type-container" data-name="Дети">
+                                <div class="dropdown-guest__type-name">Дети</div>
+                                <div class="dropdown-guest__btn-container">
+                                  <button class="dropdown-guest__change-count-button" data-action="reduce">-</button><span class="dropdown-guest__guest-count">0</span>
+                                  <button class="dropdown-guest__change-count-button" data-action="add">+</button>
+                                </div>
+                              </div>
+                              <div class="dropdown-guest__type-container" data-name="Младенцы">
+                                <div class="dropdown-guest__type-name">Младенцы</div>
+                                <div class="dropdown-guest__btn-container">
+                                  <button class="dropdown-guest__change-count-button" data-action="reduce">-</button><span class="dropdown-guest__guest-count">0</span>
+                                  <button class="dropdown-guest__change-count-button" data-action="add">+</button>
+                                </div>
+                              </div>
+                              <div class="dropdown-guest__actions">
+                                <button class="button button--borderless global--hidden" type="button" data-action="clear"><span class="button__wrapper"><span class="button__text">Очистить</span></span></button>
+                                <button class="button button--borderless" type="button" data-action="confirm"><span class="button__wrapper"><span class="button__text">Применить</span></span></button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="search-room-page__filter-item search-room-page__filter-item--with-mt-30px">
+                    <div class="form-item-container">
+                      <div class="form-item-container__header form-item-container__header--with-long-margin">
+                        <h3 class="form-item-container__title">диапазон цены</h3><span class="form-item-container__subtitle">5 000₽ - 10 000₽</span>
+                      </div>
+                      <div class="form-item-container__body">
+                        <div class="search-room-page__slider">
+                          <div class="slider">
+                            <input class="slider__input">
+                            <div class="slider__body" data-min="5000" data-max="10000" data-start="6250" data-stop="8750"></div>
+                          </div>
+                        </div>
+                        <div class="search-room-page__slider-subtitle"><span>Стоимость за сутки пребывания в номере</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="search-room-page__filter-item search-room-page__filter-item--with-mt-30px search-room-page__filter-item--with-w-230px">
+                    <div class="form-item-container">
+                      <div class="form-item-container__header">
+                        <h3 class="form-item-container__title">правила дома</h3>
+                      </div>
+                      <div class="form-item-container__body">
+                        <label class="checkbox">
+                          <input class="checkbox__true-checkbox" type="checkbox"><span class="checkbox__fake-checkbox"></span><span class="checkbox__info"><span class="checkbox__title">Можно курить</span></span>
+                        </label>
+                        <label class="checkbox">
+                          <input class="checkbox__true-checkbox" type="checkbox"><span class="checkbox__fake-checkbox"></span><span class="checkbox__info"><span class="checkbox__title">Можно с питомцами</span></span>
+                        </label>
+                        <label class="checkbox">
+                          <input class="checkbox__true-checkbox" type="checkbox"><span class="checkbox__fake-checkbox"></span><span class="checkbox__info"><span class="checkbox__title">Можно пригласить гостей (до 10 человек)</span></span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="search-room-page__filter-item search-room-page__filter-item--with-mt-30px search-room-page__filter-item--with-w-255px">
+                    <div class="form-item-container">
+                      <div class="form-item-container__header">
+                        <h3 class="form-item-container__title">доступность</h3>
+                      </div>
+                      <div class="form-item-container__body">
+                        <label class="checkbox">
+                          <input class="checkbox__true-checkbox" type="checkbox"><span class="checkbox__fake-checkbox"></span><span class="checkbox__info"><span class="checkbox__title checkbox__title--bold">Широкий коридор</span><span class="checkbox__description">Ширина коридоров в номере не менее 91 см.</span></span>
+                        </label>
+                        <label class="checkbox">
+                          <input class="checkbox__true-checkbox" type="checkbox"><span class="checkbox__fake-checkbox"></span><span class="checkbox__info"><span class="checkbox__title checkbox__title--bold">Помощник для инвалидов</span><span class="checkbox__description">На 1 этаже вас встретит специалист и проводит до номера.</span></span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="search-room-page__filter-item search-room-page__filter-item--with-mt-30px search-room-page__filter-item--with-z-index">
+                    <div class="form-item-container">
+                      <div class="form-item-container__header form-item-container__header--without-margin">
+                        <h3 class="form-item-container__title">удобства номера</h3>
+                      </div>
+                      <div class="form-item-container__body">
+                        <div class="search-room-page__form-element--with-mt-3px">
+                          <div class="form-input form-input--single form-input--with-dropdown">
+                            <div class="form-input__single-input-wrapper">
+                              <input class="form-input__input form-input__input--with-icon form-input__input--readonly" readonly data-action="toggleDropdown" placeholder="Укажите дату" data-index="0"><i class="form-input__icon material-icons">expand_more</i>
+                            </div>
+                            <div class="form-input__dropdown-wrapper">
+                              <div class="dropdown-rooms" data-dropdownName="rooms-dropdown">
+                                <div class="dropdown-rooms__type-container" data-name="Спальни">
+                                  <div class="dropdown-rooms__type-name">Спальни</div>
+                                  <div class="dropdown-rooms__btn-container">
+                                    <button class="dropdown-rooms__change-count-button" data-action="reduce">-</button><span class="dropdown-rooms__rooms-count">2</span>
+                                    <button class="dropdown-rooms__change-count-button" data-action="add">+</button>
+                                  </div>
+                                </div>
+                                <div class="dropdown-rooms__type-container" data-name="Кровати">
+                                  <div class="dropdown-rooms__type-name">Кровати</div>
+                                  <div class="dropdown-rooms__btn-container">
+                                    <button class="dropdown-rooms__change-count-button" data-action="reduce">-</button><span class="dropdown-rooms__rooms-count">2</span>
+                                    <button class="dropdown-rooms__change-count-button" data-action="add">+</button>
+                                  </div>
+                                </div>
+                                <div class="dropdown-rooms__type-container" data-name="Ванные комнаты">
+                                  <div class="dropdown-rooms__type-name">Ванные комнаты</div>
+                                  <div class="dropdown-rooms__btn-container">
+                                    <button class="dropdown-rooms__change-count-button" data-action="reduce">-</button><span class="dropdown-rooms__rooms-count">0</span>
+                                    <button class="dropdown-rooms__change-count-button" data-action="add">+</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="search-room-page__filter-item search-room-page__filter-item--with-mt-17px">
+                    <div class="checkbox-expandable-list">
+                      <details class="checkbox-expandable-list__details">
+                        <summary class="checkbox-expandable-list__summary">дополнительные удобства<i class="checkbox-expandable-list__icon material-icons">expand_more</i></summary>
+                        <div class="checkbox-expandable-list__body">
+                          <label class="checkbox">
+                            <input class="checkbox__true-checkbox" type="checkbox"><span class="checkbox__fake-checkbox"></span><span class="checkbox__info"><span class="checkbox__title">Завтрак</span></span>
+                          </label>
+                          <label class="checkbox">
+                            <input class="checkbox__true-checkbox" type="checkbox"><span class="checkbox__fake-checkbox"></span><span class="checkbox__info"><span class="checkbox__title">Письменный стол</span></span>
+                          </label>
+                          <label class="checkbox">
+                            <input class="checkbox__true-checkbox" type="checkbox"><span class="checkbox__fake-checkbox"></span><span class="checkbox__info"><span class="checkbox__title">Стул для кормления</span></span>
+                          </label>
+                          <label class="checkbox">
+                            <input class="checkbox__true-checkbox" type="checkbox"><span class="checkbox__fake-checkbox"></span><span class="checkbox__info"><span class="checkbox__title">Кроватка</span></span>
+                          </label>
+                          <label class="checkbox">
+                            <input class="checkbox__true-checkbox" type="checkbox"><span class="checkbox__fake-checkbox"></span><span class="checkbox__info"><span class="checkbox__title">Телевизор</span></span>
+                          </label>
+                          <label class="checkbox">
+                            <input class="checkbox__true-checkbox" type="checkbox"><span class="checkbox__fake-checkbox"></span><span class="checkbox__info"><span class="checkbox__title">Шампунь</span></span>
+                          </label>
+                          <label class="checkbox">
+                            <input class="checkbox__true-checkbox" type="checkbox"><span class="checkbox__fake-checkbox"></span><span class="checkbox__info"><span class="checkbox__title">Телевизор</span></span>
+                          </label>
+                          <label class="checkbox">
+                            <input class="checkbox__true-checkbox" type="checkbox"><span class="checkbox__fake-checkbox"></span><span class="checkbox__info"><span class="checkbox__title">Шампунь</span></span>
+                          </label>
+                        </div>
+                      </details>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="search-room-page__grid-item">
+                <div class="search-room-page__title">
+                  <h1>Номера, которые мы для вас подобрали</h1>
+                </div>
+                <div class="search-room-page__rooms-container">
+                  <div class="search-room-page__single-room js-single-room-card">
+                    <div class="card-room">
+                      <div class="card-room__carousel">
+                        <div class="carousel js-carousel">
+                          <div class="carousel__item"><img class="carousel__img" src="img/rooms/room-1-thumbnail.jpg" alt="Фотография комнаты №1"></div>
+                          <div class="carousel__item"><img class="carousel__img" src="img/rooms/room-2-thumbnail.jpg" alt="Фотография комнаты №2"></div>
+                          <div class="carousel__item"><img class="carousel__img" src="img/rooms/room-3-thumbnail.jpg" alt="Фотография комнаты №3"></div>
+                          <div class="carousel__item"><img class="carousel__img" src="img/rooms/room-4-thumbnail.jpg" alt="Фотография комнаты №4"></div>
+                        </div>
+                      </div><a class="card-room__link-container" href="./room-details.html#888">
+                        <div class="card-room__room-info">
+                          <div class="card-room__title">
+                            <div class="card-room__room-number-container1"><span class="card-room__room-number">№888</span><span class="card-room__room-type">Люкс</span>
+                            </div>
+                            <div class="card-room__room-price-container"><span class="card-room__price-sum">9 900₽</span><span class="card-room__price-text">в сутки</span></div>
+                          </div>
+                          <div class="card-room__br"></div>
+                          <div class="card-room__rate-wrapper"><span class="card-room__rate-button-container"><span class="rate-button js-rate-button js-rate-button--readonly">
+                                <input class="rate-button__input" value="5"><span class="rate-button__star material-icons active" data-index="1">star</span><span class="rate-button__star material-icons active" data-index="2">star</span><span class="rate-button__star material-icons active" data-index="3">star</span><span class="rate-button__star material-icons active" data-index="4">star</span><span class="rate-button__star material-icons active" data-index="5">star</span></span></span><span class="card-room__comments-container"><span class="card-room__comments-count">145</span><span class="card-room__comments-text">Отзывов</span></span></div>
+                        </div></a>
+                    </div>
+                  </div>
+                  <div class="search-room-page__single-room js-single-room-card">
+                    <div class="card-room">
+                      <div class="card-room__carousel">
+                        <div class="carousel js-carousel">
+                          <div class="carousel__item"><img class="carousel__img" src="img/rooms/room-2-thumbnail.jpg" alt="Фотография комнаты №1"></div>
+                          <div class="carousel__item"><img class="carousel__img" src="img/rooms/room-3-thumbnail.jpg" alt="Фотография комнаты №2"></div>
+                          <div class="carousel__item"><img class="carousel__img" src="img/rooms/room-4-thumbnail.jpg" alt="Фотография комнаты №3"></div>
+                          <div class="carousel__item"><img class="carousel__img" src="img/rooms/room-5-thumbnail.jpg" alt="Фотография комнаты №4"></div>
+                        </div>
+                      </div><a class="card-room__link-container" href="./room-details.html#840">
+                        <div class="card-room__room-info">
+                          <div class="card-room__title">
+                            <div class="card-room__room-number-container1"><span class="card-room__room-number">№840</span>
+                            </div>
+                            <div class="card-room__room-price-container"><span class="card-room__price-sum">9 900₽</span><span class="card-room__price-text">в сутки</span></div>
+                          </div>
+                          <div class="card-room__br"></div>
+                          <div class="card-room__rate-wrapper"><span class="card-room__rate-button-container"><span class="rate-button js-rate-button js-rate-button--readonly">
+                                <input class="rate-button__input" value="4"><span class="rate-button__star material-icons active" data-index="1">star</span><span class="rate-button__star material-icons active" data-index="2">star</span><span class="rate-button__star material-icons active" data-index="3">star</span><span class="rate-button__star material-icons active" data-index="4">star</span><span class="rate-button__star material-icons" data-index="5">star_border</span></span></span><span class="card-room__comments-container"><span class="card-room__comments-count">65</span><span class="card-room__comments-text">Отзывов</span></span></div>
+                        </div></a>
+                    </div>
+                  </div>
+                  <div class="search-room-page__single-room js-single-room-card">
+                    <div class="card-room">
+                      <div class="card-room__carousel">
+                        <div class="carousel js-carousel">
+                          <div class="carousel__item"><img class="carousel__img" src="img/rooms/room-3-thumbnail.jpg" alt="Фотография комнаты №1"></div>
+                          <div class="carousel__item"><img class="carousel__img" src="img/rooms/room-4-thumbnail.jpg" alt="Фотография комнаты №2"></div>
+                          <div class="carousel__item"><img class="carousel__img" src="img/rooms/room-5-thumbnail.jpg" alt="Фотография комнаты №3"></div>
+                          <div class="carousel__item"><img class="carousel__img" src="img/rooms/room-6-thumbnail.jpg" alt="Фотография комнаты №4"></div>
+                        </div>
+                      </div><a class="card-room__link-container" href="./room-details.html#980">
+                        <div class="card-room__room-info">
+                          <div class="card-room__title">
+                            <div class="card-room__room-number-container1"><span class="card-room__room-number">№980</span>
+                            </div>
+                            <div class="card-room__room-price-container"><span class="card-room__price-sum">8 500₽</span><span class="card-room__price-text">в сутки</span></div>
+                          </div>
+                          <div class="card-room__br"></div>
+                          <div class="card-room__rate-wrapper"><span class="card-room__rate-button-container"><span class="rate-button js-rate-button js-rate-button--readonly">
+                                <input class="rate-button__input" value="3"><span class="rate-button__star material-icons active" data-index="1">star</span><span class="rate-button__star material-icons active" data-index="2">star</span><span class="rate-button__star material-icons active" data-index="3">star</span><span class="rate-button__star material-icons" data-index="4">star_border</span><span class="rate-button__star material-icons" data-index="5">star_border</span></span></span><span class="card-room__comments-container"><span class="card-room__comments-count">35</span><span class="card-room__comments-text">Отзывов</span></span></div>
+                        </div></a>
+                    </div>
+                  </div>
+                  <div class="search-room-page__single-room js-single-room-card">
+                    <div class="card-room">
+                      <div class="card-room__carousel">
+                        <div class="carousel js-carousel">
+                          <div class="carousel__item"><img class="carousel__img" src="img/rooms/room-4-thumbnail.jpg" alt="Фотография комнаты №1"></div>
+                          <div class="carousel__item"><img class="carousel__img" src="img/rooms/room-5-thumbnail.jpg" alt="Фотография комнаты №2"></div>
+                          <div class="carousel__item"><img class="carousel__img" src="img/rooms/room-6-thumbnail.jpg" alt="Фотография комнаты №3"></div>
+                          <div class="carousel__item"><img class="carousel__img" src="img/rooms/room-7-thumbnail.jpg" alt="Фотография комнаты №4"></div>
+                        </div>
+                      </div><a class="card-room__link-container" href="./room-details.html#856">
+                        <div class="card-room__room-info">
+                          <div class="card-room__title">
+                            <div class="card-room__room-number-container1"><span class="card-room__room-number">№856</span>
+                            </div>
+                            <div class="card-room__room-price-container"><span class="card-room__price-sum">7 300₽</span><span class="card-room__price-text">в сутки</span></div>
+                          </div>
+                          <div class="card-room__br"></div>
+                          <div class="card-room__rate-wrapper"><span class="card-room__rate-button-container"><span class="rate-button js-rate-button js-rate-button--readonly">
+                                <input class="rate-button__input" value="5"><span class="rate-button__star material-icons active" data-index="1">star</span><span class="rate-button__star material-icons active" data-index="2">star</span><span class="rate-button__star material-icons active" data-index="3">star</span><span class="rate-button__star material-icons active" data-index="4">star</span><span class="rate-button__star material-icons active" data-index="5">star</span></span></span><span class="card-room__comments-container"><span class="card-room__comments-count">19</span><span class="card-room__comments-text">Отзывов</span></span></div>
+                        </div></a>
+                    </div>
+                  </div>
+                  <div class="search-room-page__single-room js-single-room-card">
+                    <div class="card-room">
+                      <div class="card-room__carousel">
+                        <div class="carousel js-carousel">
+                          <div class="carousel__item"><img class="carousel__img" src="img/rooms/room-5-thumbnail.jpg" alt="Фотография комнаты №1"></div>
+                          <div class="carousel__item"><img class="carousel__img" src="img/rooms/room-6-thumbnail.jpg" alt="Фотография комнаты №2"></div>
+                          <div class="carousel__item"><img class="carousel__img" src="img/rooms/room-7-thumbnail.jpg" alt="Фотография комнаты №3"></div>
+                          <div class="carousel__item"><img class="carousel__img" src="img/rooms/room-8-thumbnail.jpg" alt="Фотография комнаты №4"></div>
+                        </div>
+                      </div><a class="card-room__link-container" href="./room-details.html#740">
+                        <div class="card-room__room-info">
+                          <div class="card-room__title">
+                            <div class="card-room__room-number-container1"><span class="card-room__room-number">№740</span>
+                            </div>
+                            <div class="card-room__room-price-container"><span class="card-room__price-sum">6 000₽</span><span class="card-room__price-text">в сутки</span></div>
+                          </div>
+                          <div class="card-room__br"></div>
+                          <div class="card-room__rate-wrapper"><span class="card-room__rate-button-container"><span class="rate-button js-rate-button js-rate-button--readonly">
+                                <input class="rate-button__input" value="4"><span class="rate-button__star material-icons active" data-index="1">star</span><span class="rate-button__star material-icons active" data-index="2">star</span><span class="rate-button__star material-icons active" data-index="3">star</span><span class="rate-button__star material-icons active" data-index="4">star</span><span class="rate-button__star material-icons" data-index="5">star_border</span></span></span><span class="card-room__comments-container"><span class="card-room__comments-count">44</span><span class="card-room__comments-text">Отзывов</span></span></div>
+                        </div></a>
+                    </div>
+                  </div>
+                  <div class="search-room-page__single-room js-single-room-card">
+                    <div class="card-room">
+                      <div class="card-room__carousel">
+                        <div class="carousel js-carousel">
+                          <div class="carousel__item"><img class="carousel__img" src="img/rooms/room-6-thumbnail.jpg" alt="Фотография комнаты №1"></div>
+                          <div class="carousel__item"><img class="carousel__img" src="img/rooms/room-7-thumbnail.jpg" alt="Фотография комнаты №2"></div>
+                          <div class="carousel__item"><img class="carousel__img" src="img/rooms/room-8-thumbnail.jpg" alt="Фотография комнаты №3"></div>
+                          <div class="carousel__item"><img class="carousel__img" src="img/rooms/room-9-thumbnail.jpg" alt="Фотография комнаты №4"></div>
+                        </div>
+                      </div><a class="card-room__link-container" href="./room-details.html#982">
+                        <div class="card-room__room-info">
+                          <div class="card-room__title">
+                            <div class="card-room__room-number-container1"><span class="card-room__room-number">№982</span>
+                            </div>
+                            <div class="card-room__room-price-container"><span class="card-room__price-sum">5 800₽</span><span class="card-room__price-text">в сутки</span></div>
+                          </div>
+                          <div class="card-room__br"></div>
+                          <div class="card-room__rate-wrapper"><span class="card-room__rate-button-container"><span class="rate-button js-rate-button js-rate-button--readonly">
+                                <input class="rate-button__input" value="3"><span class="rate-button__star material-icons active" data-index="1">star</span><span class="rate-button__star material-icons active" data-index="2">star</span><span class="rate-button__star material-icons active" data-index="3">star</span><span class="rate-button__star material-icons" data-index="4">star_border</span><span class="rate-button__star material-icons" data-index="5">star_border</span></span></span><span class="card-room__comments-container"><span class="card-room__comments-count">56</span><span class="card-room__comments-text">Отзывов</span></span></div>
+                        </div></a>
+                    </div>
+                  </div>
+                  <div class="search-room-page__single-room js-single-room-card">
+                    <div class="card-room">
+                      <div class="card-room__carousel">
+                        <div class="carousel js-carousel">
+                          <div class="carousel__item"><img class="carousel__img" src="img/rooms/room-7-thumbnail.jpg" alt="Фотография комнаты №1"></div>
+                          <div class="carousel__item"><img class="carousel__img" src="img/rooms/room-8-thumbnail.jpg" alt="Фотография комнаты №2"></div>
+                          <div class="carousel__item"><img class="carousel__img" src="img/rooms/room-9-thumbnail.jpg" alt="Фотография комнаты №3"></div>
+                          <div class="carousel__item"><img class="carousel__img" src="img/rooms/room-10-thumbnail.jpg" alt="Фотография комнаты №4"></div>
+                        </div>
+                      </div><a class="card-room__link-container" href="./room-details.html#678">
+                        <div class="card-room__room-info">
+                          <div class="card-room__title">
+                            <div class="card-room__room-number-container1"><span class="card-room__room-number">№678</span>
+                            </div>
+                            <div class="card-room__room-price-container"><span class="card-room__price-sum">5 500₽</span><span class="card-room__price-text">в сутки</span></div>
+                          </div>
+                          <div class="card-room__br"></div>
+                          <div class="card-room__rate-wrapper"><span class="card-room__rate-button-container"><span class="rate-button js-rate-button js-rate-button--readonly">
+                                <input class="rate-button__input" value="5"><span class="rate-button__star material-icons active" data-index="1">star</span><span class="rate-button__star material-icons active" data-index="2">star</span><span class="rate-button__star material-icons active" data-index="3">star</span><span class="rate-button__star material-icons active" data-index="4">star</span><span class="rate-button__star material-icons active" data-index="5">star</span></span></span><span class="card-room__comments-container"><span class="card-room__comments-count">45</span><span class="card-room__comments-text">Отзывов</span></span></div>
+                        </div></a>
+                    </div>
+                  </div>
+                  <div class="search-room-page__single-room js-single-room-card">
+                    <div class="card-room">
+                      <div class="card-room__carousel">
+                        <div class="carousel js-carousel">
+                          <div class="carousel__item"><img class="carousel__img" src="img/rooms/room-8-thumbnail.jpg" alt="Фотография комнаты №1"></div>
+                          <div class="carousel__item"><img class="carousel__img" src="img/rooms/room-9-thumbnail.jpg" alt="Фотография комнаты №2"></div>
+                          <div class="carousel__item"><img class="carousel__img" src="img/rooms/room-10-thumbnail.jpg" alt="Фотография комнаты №3"></div>
+                          <div class="carousel__item"><img class="carousel__img" src="img/rooms/room-11-thumbnail.jpg" alt="Фотография комнаты №4"></div>
+                        </div>
+                      </div><a class="card-room__link-container" href="./room-details.html#450">
+                        <div class="card-room__room-info">
+                          <div class="card-room__title">
+                            <div class="card-room__room-number-container1"><span class="card-room__room-number">№450</span>
+                            </div>
+                            <div class="card-room__room-price-container"><span class="card-room__price-sum">5 300₽</span><span class="card-room__price-text">в сутки</span></div>
+                          </div>
+                          <div class="card-room__br"></div>
+                          <div class="card-room__rate-wrapper"><span class="card-room__rate-button-container"><span class="rate-button js-rate-button js-rate-button--readonly">
+                                <input class="rate-button__input" value="4"><span class="rate-button__star material-icons active" data-index="1">star</span><span class="rate-button__star material-icons active" data-index="2">star</span><span class="rate-button__star material-icons active" data-index="3">star</span><span class="rate-button__star material-icons active" data-index="4">star</span><span class="rate-button__star material-icons" data-index="5">star_border</span></span></span><span class="card-room__comments-container"><span class="card-room__comments-count">39</span><span class="card-room__comments-text">Отзывов</span></span></div>
+                        </div></a>
+                    </div>
+                  </div>
+                  <div class="search-room-page__single-room js-single-room-card">
+                    <div class="card-room">
+                      <div class="card-room__carousel">
+                        <div class="carousel js-carousel">
+                          <div class="carousel__item"><img class="carousel__img" src="img/rooms/room-9-thumbnail.jpg" alt="Фотография комнаты №1"></div>
+                          <div class="carousel__item"><img class="carousel__img" src="img/rooms/room-10-thumbnail.jpg" alt="Фотография комнаты №2"></div>
+                          <div class="carousel__item"><img class="carousel__img" src="img/rooms/room-11-thumbnail.jpg" alt="Фотография комнаты №3"></div>
+                          <div class="carousel__item"><img class="carousel__img" src="img/rooms/room-12-thumbnail.jpg" alt="Фотография комнаты №4"></div>
+                        </div>
+                      </div><a class="card-room__link-container" href="./room-details.html#350">
+                        <div class="card-room__room-info">
+                          <div class="card-room__title">
+                            <div class="card-room__room-number-container1"><span class="card-room__room-number">№350</span>
+                            </div>
+                            <div class="card-room__room-price-container"><span class="card-room__price-sum">5 000₽</span><span class="card-room__price-text">в сутки</span></div>
+                          </div>
+                          <div class="card-room__br"></div>
+                          <div class="card-room__rate-wrapper"><span class="card-room__rate-button-container"><span class="rate-button js-rate-button js-rate-button--readonly">
+                                <input class="rate-button__input" value="3"><span class="rate-button__star material-icons active" data-index="1">star</span><span class="rate-button__star material-icons active" data-index="2">star</span><span class="rate-button__star material-icons active" data-index="3">star</span><span class="rate-button__star material-icons" data-index="4">star_border</span><span class="rate-button__star material-icons" data-index="5">star_border</span></span></span><span class="card-room__comments-container"><span class="card-room__comments-count">77</span><span class="card-room__comments-text">Отзывов</span></span></div>
+                        </div></a>
+                    </div>
+                  </div>
+                  <div class="search-room-page__single-room js-single-room-card">
+                    <div class="card-room">
+                      <div class="card-room__carousel">
+                        <div class="carousel js-carousel">
+                          <div class="carousel__item"><img class="carousel__img" src="img/rooms/room-10-thumbnail.jpg" alt="Фотография комнаты №1"></div>
+                          <div class="carousel__item"><img class="carousel__img" src="img/rooms/room-11-thumbnail.jpg" alt="Фотография комнаты №2"></div>
+                          <div class="carousel__item"><img class="carousel__img" src="img/rooms/room-12-thumbnail.jpg" alt="Фотография комнаты №3"></div>
+                          <div class="carousel__item"><img class="carousel__img" src="img/rooms/room-1-thumbnail.jpg" alt="Фотография комнаты №4"></div>
+                        </div>
+                      </div><a class="card-room__link-container" href="./room-details.html#666">
+                        <div class="card-room__room-info">
+                          <div class="card-room__title">
+                            <div class="card-room__room-number-container1"><span class="card-room__room-number">№666</span>
+                            </div>
+                            <div class="card-room__room-price-container"><span class="card-room__price-sum">5 000₽</span><span class="card-room__price-text">в сутки</span></div>
+                          </div>
+                          <div class="card-room__br"></div>
+                          <div class="card-room__rate-wrapper"><span class="card-room__rate-button-container"><span class="rate-button js-rate-button js-rate-button--readonly">
+                                <input class="rate-button__input" value="5"><span class="rate-button__star material-icons active" data-index="1">star</span><span class="rate-button__star material-icons active" data-index="2">star</span><span class="rate-button__star material-icons active" data-index="3">star</span><span class="rate-button__star material-icons active" data-index="4">star</span><span class="rate-button__star material-icons active" data-index="5">star</span></span></span><span class="card-room__comments-container"><span class="card-room__comments-count">25</span><span class="card-room__comments-text">Отзывов</span></span></div>
+                        </div></a>
+                    </div>
+                  </div>
+                  <div class="search-room-page__single-room js-single-room-card">
+                    <div class="card-room">
+                      <div class="card-room__carousel">
+                        <div class="carousel js-carousel">
+                          <div class="carousel__item"><img class="carousel__img" src="img/rooms/room-11-thumbnail.jpg" alt="Фотография комнаты №1"></div>
+                          <div class="carousel__item"><img class="carousel__img" src="img/rooms/room-12-thumbnail.jpg" alt="Фотография комнаты №2"></div>
+                          <div class="carousel__item"><img class="carousel__img" src="img/rooms/room-1-thumbnail.jpg" alt="Фотография комнаты №3"></div>
+                          <div class="carousel__item"><img class="carousel__img" src="img/rooms/room-2-thumbnail.jpg" alt="Фотография комнаты №4"></div>
+                        </div>
+                      </div><a class="card-room__link-container" href="./room-details.html#444">
+                        <div class="card-room__room-info">
+                          <div class="card-room__title">
+                            <div class="card-room__room-number-container1"><span class="card-room__room-number">№444</span>
+                            </div>
+                            <div class="card-room__room-price-container"><span class="card-room__price-sum">5 000₽</span><span class="card-room__price-text">в сутки</span></div>
+                          </div>
+                          <div class="card-room__br"></div>
+                          <div class="card-room__rate-wrapper"><span class="card-room__rate-button-container"><span class="rate-button js-rate-button js-rate-button--readonly">
+                                <input class="rate-button__input" value="3"><span class="rate-button__star material-icons active" data-index="1">star</span><span class="rate-button__star material-icons active" data-index="2">star</span><span class="rate-button__star material-icons active" data-index="3">star</span><span class="rate-button__star material-icons" data-index="4">star_border</span><span class="rate-button__star material-icons" data-index="5">star_border</span></span></span><span class="card-room__comments-container"><span class="card-room__comments-count">15</span><span class="card-room__comments-text">Отзывов</span></span></div>
+                        </div></a>
+                    </div>
+                  </div>
+                  <div class="search-room-page__single-room js-single-room-card">
+                    <div class="card-room">
+                      <div class="card-room__carousel">
+                        <div class="carousel js-carousel">
+                          <div class="carousel__item"><img class="carousel__img" src="img/rooms/room-12-thumbnail.jpg" alt="Фотография комнаты №1"></div>
+                          <div class="carousel__item"><img class="carousel__img" src="img/rooms/room-1-thumbnail.jpg" alt="Фотография комнаты №2"></div>
+                          <div class="carousel__item"><img class="carousel__img" src="img/rooms/room-2-thumbnail.jpg" alt="Фотография комнаты №3"></div>
+                          <div class="carousel__item"><img class="carousel__img" src="img/rooms/room-3-thumbnail.jpg" alt="Фотография комнаты №4"></div>
+                        </div>
+                      </div><a class="card-room__link-container" href="./room-details.html#352">
+                        <div class="card-room__room-info">
+                          <div class="card-room__title">
+                            <div class="card-room__room-number-container1"><span class="card-room__room-number">№352</span>
+                            </div>
+                            <div class="card-room__room-price-container"><span class="card-room__price-sum">5 000₽</span><span class="card-room__price-text">в сутки</span></div>
+                          </div>
+                          <div class="card-room__br"></div>
+                          <div class="card-room__rate-wrapper"><span class="card-room__rate-button-container"><span class="rate-button js-rate-button js-rate-button--readonly">
+                                <input class="rate-button__input" value="3"><span class="rate-button__star material-icons active" data-index="1">star</span><span class="rate-button__star material-icons active" data-index="2">star</span><span class="rate-button__star material-icons active" data-index="3">star</span><span class="rate-button__star material-icons" data-index="4">star_border</span><span class="rate-button__star material-icons" data-index="5">star_border</span></span></span><span class="card-room__comments-container"><span class="card-room__comments-count">55</span><span class="card-room__comments-text">Отзывов</span></span></div>
+                        </div></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="search-room-page__pagination">
+                  <div class="pagination" data-totalPages="15">
+                    <div class="pagination__wrapper"></div>
+                    <div class="pagination__description">1 – 12 из 100+ вариантов аренды</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="page__footer">
+      <footer class="footer">
+        <section class="footer__section footer__section--base">
+          <div class="footer__section-container">
+            <div class="footer__grid-container">
+              <div class="footer__grid-item footer__grid-item--with-brand-info">
+                <div class="footer__brand-logo"><img src="img/logo/logo-default.svg"></div>
+                <div class="footer__brand-info"><span>Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»</span></div>
+              </div>
+              <div class="footer__grid-item footer__grid-item--with-nav-info">
+                <div class="footer__grid-title"><span>Навигация</span></div>
+                <ul class="footer__link-list">
+                  <li class="footer__link-item">О нас</li>
+                  <li class="footer__link-item">Новости</li>
+                  <li class="footer__link-item">Служба поддержки</li>
+                  <li class="footer__link-item">Услуги</li>
+                </ul>
+              </div>
+              <div class="footer__grid-item footer__grid-item--with-aboutUs-info">
+                <div class="footer__grid-title"><span>О нас</span></div>
+                <ul class="footer__link-list">
+                  <li class="footer__link-item">О сервисе</li>
+                  <li class="footer__link-item">Наша команда</li>
+                  <li class="footer__link-item">Вакансии</li>
+                  <li class="footer__link-item">Инвесторы</li>
+                </ul>
+              </div>
+              <div class="footer__grid-item footer__grid-item--with-support-info">
+                <div class="footer__grid-title"><span>Служба поддержки</span></div>
+                <ul class="footer__link-list">
+                  <li class="footer__link-item">Соглашения</li>
+                  <li class="footer__link-item">Сообщества</li>
+                  <li class="footer__link-item">Связь с нами</li>
+                </ul>
+              </div>
+              <div class="footer__grid-item footer__grid-item--with-subscribe-info">
+                <div class="footer__grid-title"><span>Подписка</span></div>
+                <div class="footer__subscribe-text"><span>Получайте специальные предложения и новости сервиса</span></div>
+                <div class="footer__subscribe-input">
+                  <form action="https://echo.htmlacademy.ru" method="post" name="subscribe">
+                    <div class="form-input form-input--single">
+                      <div class="form-input__single-input-wrapper">
+                        <input class="form-input__input form-input__input--with-icon" placeholder="Email" name="Email" data-index="0">
+                        <button class="form-input__button material-icons" type="submit">arrow_forward</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="footer__section footer__section--copyright">
+          <div class="footer__section-container">
+            <div class="footer__copyright-wrapper">
+              <div class="footer__copyright-text"><span>Copyright © 2018 Toxin отель. Все права защищены.</span></div>
+              <div class="footer__copyright-socials"><a class="footer__social-link" href="404.html" target="_blank" rel="noopener noreferrer" title="Twitter"><span class="footer__social-icon"></span></a><a class="footer__social-link" href="404.html" target="_blank" rel="noopener noreferrer" title="Facebook"><span class="footer__social-icon"></span></a><a class="footer__social-link" href="404.html" target="_blank" rel="noopener noreferrer" title="Instagram"><span class="footer__social-icon"></span></a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </footer>
+    </div>
+  </body>
+</html>
